@@ -1,6 +1,9 @@
-#Importa do arquivo dados.py a função acessos (pode ser classe)
+#importa do arquivo dados a funcao acessos pode ser classe
 from dados import carregarAcessos
-#Assimila X e Y ao resultaado da função
+#assimila X e Y ao resultaado da funcao
 X, Y = carregarAcessos()
-print X
-print Y
+
+from sklearn.naive_bayes import MultinomialNB
+modelo = MultinomialNB()
+modelo.fit(X, Y)
+print modelo.predict([[1,0,1], [0, 1, 0]])

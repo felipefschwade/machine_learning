@@ -7,7 +7,7 @@ def carregarAcessos():
 
 	#Abre o arquivo no modo "r"ead "b"inarie
 	arquivo = open('acesso_pagina.csv', 'rb')
-	#utiliza a função reader para assimilar o arquivo ao que for lido
+	#utiliza a funcai reader para assimilar o arquivo ao que for lido
 	lido = csv.reader(arquivo)
 	lido.next() #devolve o proximo item partindo do objeto
 	for linha in lido:
