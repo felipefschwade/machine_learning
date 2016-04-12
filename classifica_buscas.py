@@ -13,8 +13,8 @@ treino_Y = Y[:tamanho_de_treino]
 teste_X = X[-tamanho_de_teste:]
 teste_Y = Y[-tamanho_de_teste:]
 #Testando a eficacia de um algoritmo que chuta tudo 0 ou 1
-acerto_um = sum(Y)
-acerto_zero = len(Y) - acerto_um
+acerto_um = len(Y[Y==1])
+acerto_zero = len(Y[Y==0])
 taxa_de_acerto_base = 100.0 * max(acerto_um, acerto_zero) / len(Y)
 print "Taxa de acerto base: %f" % taxa_de_acerto_base
 #importa a biblioteca do modelo bayesiano
